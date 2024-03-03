@@ -1,0 +1,47 @@
+:root{
+    --widthWin: 100vw;
+    --cubeSide: 200px;
+    --chiftCube: 0px;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+body{
+    width: var(--widthWin);
+    height: 100vh;  
+    
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;   
+}
+#slaider{
+    width: var(--widthWin);
+}
+.cube{
+    margin-top: 100px;
+    width: var(--cubeSide);
+    height: var(--cubeSide);
+
+    border: 2px solid black;
+}
+.red{
+    background-color: red;
+
+    position: relative;
+    left: calc(0px + var(--chiftCube));
+
+    transition: 0.5s;
+}
+.blue{
+    background-color: blue;
+    position: relative;
+    left:calc(var(--widthWin) - var(--cubeSide) - var(--chiftCube));
+
+    transition: 0.5s;
+}
+
